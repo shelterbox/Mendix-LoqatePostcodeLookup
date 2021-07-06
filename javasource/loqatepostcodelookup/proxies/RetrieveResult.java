@@ -2,7 +2,7 @@
 //
 // WARNING: Code you write here will be lost the next time you deploy the project.
 
-package postcodelookup.proxies;
+package loqatepostcodelookup.proxies;
 
 public class RetrieveResult
 {
@@ -13,14 +13,13 @@ public class RetrieveResult
 	/**
 	 * Internal name of this entity
 	 */
-	public static final java.lang.String entityName = "PostcodeLookup.RetrieveResult";
+	public static final java.lang.String entityName = "LoqatePostcodeLookup.RetrieveResult";
 
 	/**
 	 * Enum describing members of this entity
 	 */
 	public enum MemberNames
 	{
-		LastUpdated("LastUpdated"),
 		_Id("_Id"),
 		_Type("_Type"),
 		DomesticId("DomesticId"),
@@ -57,8 +56,7 @@ public class RetrieveResult
 		Barcode("Barcode"),
 		POBoxNumber("POBoxNumber"),
 		Label("Label"),
-		DataLevel("DataLevel"),
-		RetrieveResult_Country("PostcodeLookup.RetrieveResult_Country");
+		DataLevel("DataLevel");
 
 		private java.lang.String metaName;
 
@@ -76,15 +74,15 @@ public class RetrieveResult
 
 	public RetrieveResult(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		this(context, com.mendix.core.Core.instantiate(context, "PostcodeLookup.RetrieveResult"));
+		this(context, com.mendix.core.Core.instantiate(context, "LoqatePostcodeLookup.RetrieveResult"));
 	}
 
 	protected RetrieveResult(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject retrieveResultMendixObject)
 	{
 		if (retrieveResultMendixObject == null)
 			throw new java.lang.IllegalArgumentException("The given object cannot be null.");
-		if (!com.mendix.core.Core.isSubClassOf("PostcodeLookup.RetrieveResult", retrieveResultMendixObject.getType()))
-			throw new java.lang.IllegalArgumentException("The given object is not a PostcodeLookup.RetrieveResult");
+		if (!com.mendix.core.Core.isSubClassOf("LoqatePostcodeLookup.RetrieveResult", retrieveResultMendixObject.getType()))
+			throw new java.lang.IllegalArgumentException("The given object is not a LoqatePostcodeLookup.RetrieveResult");
 
 		this.retrieveResultMendixObject = retrieveResultMendixObject;
 		this.context = context;
@@ -94,31 +92,31 @@ public class RetrieveResult
 	 * @deprecated Use 'RetrieveResult.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@java.lang.Deprecated
-	public static postcodelookup.proxies.RetrieveResult initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
+	public static loqatepostcodelookup.proxies.RetrieveResult initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
-		return postcodelookup.proxies.RetrieveResult.load(context, mendixIdentifier);
+		return loqatepostcodelookup.proxies.RetrieveResult.load(context, mendixIdentifier);
 	}
 
 	/**
 	 * Initialize a proxy using context (recommended). This context will be used for security checking when the get- and set-methods without context parameters are called.
 	 * The get- and set-methods with context parameter should be used when for instance sudo access is necessary (IContext.createSudoClone() can be used to obtain sudo access).
 	 */
-	public static postcodelookup.proxies.RetrieveResult initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
+	public static loqatepostcodelookup.proxies.RetrieveResult initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
-		return new postcodelookup.proxies.RetrieveResult(context, mendixObject);
+		return new loqatepostcodelookup.proxies.RetrieveResult(context, mendixObject);
 	}
 
-	public static postcodelookup.proxies.RetrieveResult load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
+	public static loqatepostcodelookup.proxies.RetrieveResult load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
 		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
-		return postcodelookup.proxies.RetrieveResult.initialize(context, mendixObject);
+		return loqatepostcodelookup.proxies.RetrieveResult.initialize(context, mendixObject);
 	}
 
-	public static java.util.List<postcodelookup.proxies.RetrieveResult> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
+	public static java.util.List<loqatepostcodelookup.proxies.RetrieveResult> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
-		java.util.List<postcodelookup.proxies.RetrieveResult> result = new java.util.ArrayList<postcodelookup.proxies.RetrieveResult>();
-		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//PostcodeLookup.RetrieveResult" + xpathConstraint))
-			result.add(postcodelookup.proxies.RetrieveResult.initialize(context, obj));
+		java.util.List<loqatepostcodelookup.proxies.RetrieveResult> result = new java.util.ArrayList<loqatepostcodelookup.proxies.RetrieveResult>();
+		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//LoqatePostcodeLookup.RetrieveResult" + xpathConstraint))
+			result.add(loqatepostcodelookup.proxies.RetrieveResult.initialize(context, obj));
 		return result;
 	}
 
@@ -153,42 +151,6 @@ public class RetrieveResult
 	{
 		com.mendix.core.Core.delete(context, getMendixObject());
 	}
-	/**
-	 * @return value of LastUpdated
-	 */
-	public final java.util.Date getLastUpdated()
-	{
-		return getLastUpdated(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of LastUpdated
-	 */
-	public final java.util.Date getLastUpdated(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.util.Date) getMendixObject().getValue(context, MemberNames.LastUpdated.toString());
-	}
-
-	/**
-	 * Set value of LastUpdated
-	 * @param lastupdated
-	 */
-	public final void setLastUpdated(java.util.Date lastupdated)
-	{
-		setLastUpdated(getContext(), lastupdated);
-	}
-
-	/**
-	 * Set value of LastUpdated
-	 * @param context
-	 * @param lastupdated
-	 */
-	public final void setLastUpdated(com.mendix.systemwideinterfaces.core.IContext context, java.util.Date lastupdated)
-	{
-		getMendixObject().setValue(context, MemberNames.LastUpdated.toString(), lastupdated);
-	}
-
 	/**
 	 * @return value of _Id
 	 */
@@ -1522,49 +1484,6 @@ public class RetrieveResult
 	}
 
 	/**
-	 * @return value of RetrieveResult_Country
-	 */
-	public final postcodelookup.proxies.Country getRetrieveResult_Country() throws com.mendix.core.CoreException
-	{
-		return getRetrieveResult_Country(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of RetrieveResult_Country
-	 */
-	public final postcodelookup.proxies.Country getRetrieveResult_Country(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		postcodelookup.proxies.Country result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.RetrieveResult_Country.toString());
-		if (identifier != null)
-			result = postcodelookup.proxies.Country.load(context, identifier);
-		return result;
-	}
-
-	/**
-	 * Set value of RetrieveResult_Country
-	 * @param retrieveresult_country
-	 */
-	public final void setRetrieveResult_Country(postcodelookup.proxies.Country retrieveresult_country)
-	{
-		setRetrieveResult_Country(getContext(), retrieveresult_country);
-	}
-
-	/**
-	 * Set value of RetrieveResult_Country
-	 * @param context
-	 * @param retrieveresult_country
-	 */
-	public final void setRetrieveResult_Country(com.mendix.systemwideinterfaces.core.IContext context, postcodelookup.proxies.Country retrieveresult_country)
-	{
-		if (retrieveresult_country == null)
-			getMendixObject().setValue(context, MemberNames.RetrieveResult_Country.toString(), null);
-		else
-			getMendixObject().setValue(context, MemberNames.RetrieveResult_Country.toString(), retrieveresult_country.getMendixObject().getId());
-	}
-
-	/**
 	 * @return the IMendixObject instance of this proxy for use in the Core interface.
 	 */
 	public final com.mendix.systemwideinterfaces.core.IMendixObject getMendixObject()
@@ -1588,7 +1507,7 @@ public class RetrieveResult
 
 		if (obj != null && getClass().equals(obj.getClass()))
 		{
-			final postcodelookup.proxies.RetrieveResult that = (postcodelookup.proxies.RetrieveResult) obj;
+			final loqatepostcodelookup.proxies.RetrieveResult that = (loqatepostcodelookup.proxies.RetrieveResult) obj;
 			return getMendixObject().equals(that.getMendixObject());
 		}
 		return false;
@@ -1605,7 +1524,7 @@ public class RetrieveResult
 	 */
 	public static java.lang.String getType()
 	{
-		return "PostcodeLookup.RetrieveResult";
+		return "LoqatePostcodeLookup.RetrieveResult";
 	}
 
 	/**

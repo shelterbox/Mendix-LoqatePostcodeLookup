@@ -2,26 +2,26 @@
 //
 // WARNING: Code you write here will be lost the next time you deploy the project.
 
-package postcodelookup.proxies.constants;
+package loqatepostcodelookup.proxies.constants;
 
 import com.mendix.core.Core;
 
 public class Constants
 {
-	// These are the constants for the PostcodeLookup module
+	// These are the constants for the LoqatePostcodeLookup module
 
 	public static java.lang.String getAPIKey()
 	{
-		return (java.lang.String)Core.getConfiguration().getConstantValue("PostcodeLookup.APIKey");
+		return (java.lang.String)Core.getConfiguration().getConstantValue("LoqatePostcodeLookup.APIKey");
 	}
 
 	public static java.lang.Long getCacheExpirationInDays()
 	{
-		return (java.lang.Long)Core.getConfiguration().getConstantValue("PostcodeLookup.CacheExpirationInDays");
+		return (java.lang.Long)Core.getConfiguration().getConstantValue("LoqatePostcodeLookup.CacheExpirationInDays");
 	}
 
-	public static java.lang.String getDefaultCountryISOA2()
+	public static java.lang.Long getFindLimit()
 	{
-		return (java.lang.String)Core.getConfiguration().getConstantValue("PostcodeLookup.DefaultCountryISOA2");
+		return (java.lang.Long)Core.getConfiguration().getConstantValue("LoqatePostcodeLookup.FindLimit");
 	}
 }

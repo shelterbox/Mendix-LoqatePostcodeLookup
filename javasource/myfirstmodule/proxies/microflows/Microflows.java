@@ -15,7 +15,7 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 public class Microflows
 {
 	// These are the microflows for the MyFirstModule module
-	public static void aCT_Address_Select(IContext context, postcodelookup.proxies.FindResult _selectedFindResult, postcodelookup.proxies.Search _search, myfirstmodule.proxies.Address _address)
+	public static void aCT_Address_Select(IContext context, loqatepostcodelookup.proxies.FindResult _selectedFindResult, loqatepostcodelookup.proxies.Search _search, myfirstmodule.proxies.Address _address)
 	{
 		try
 		{

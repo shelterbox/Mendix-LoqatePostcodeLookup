@@ -2,7 +2,7 @@
 //
 // WARNING: Code you write here will be lost the next time you deploy the project.
 
-package postcodelookup.proxies;
+package loqatepostcodelookup.proxies;
 
 public class Country
 {
@@ -13,7 +13,7 @@ public class Country
 	/**
 	 * Internal name of this entity
 	 */
-	public static final java.lang.String entityName = "PostcodeLookup.Country";
+	public static final java.lang.String entityName = "LoqatePostcodeLookup.Country";
 
 	/**
 	 * Enum describing members of this entity
@@ -39,15 +39,15 @@ public class Country
 
 	public Country(com.mendix.systemwideinterfaces.core.IContext context)
 	{
-		this(context, com.mendix.core.Core.instantiate(context, "PostcodeLookup.Country"));
+		this(context, com.mendix.core.Core.instantiate(context, "LoqatePostcodeLookup.Country"));
 	}
 
 	protected Country(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject countryMendixObject)
 	{
 		if (countryMendixObject == null)
 			throw new java.lang.IllegalArgumentException("The given object cannot be null.");
-		if (!com.mendix.core.Core.isSubClassOf("PostcodeLookup.Country", countryMendixObject.getType()))
-			throw new java.lang.IllegalArgumentException("The given object is not a PostcodeLookup.Country");
+		if (!com.mendix.core.Core.isSubClassOf("LoqatePostcodeLookup.Country", countryMendixObject.getType()))
+			throw new java.lang.IllegalArgumentException("The given object is not a LoqatePostcodeLookup.Country");
 
 		this.countryMendixObject = countryMendixObject;
 		this.context = context;
@@ -57,31 +57,31 @@ public class Country
 	 * @deprecated Use 'Country.load(IContext, IMendixIdentifier)' instead.
 	 */
 	@java.lang.Deprecated
-	public static postcodelookup.proxies.Country initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
+	public static loqatepostcodelookup.proxies.Country initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
-		return postcodelookup.proxies.Country.load(context, mendixIdentifier);
+		return loqatepostcodelookup.proxies.Country.load(context, mendixIdentifier);
 	}
 
 	/**
 	 * Initialize a proxy using context (recommended). This context will be used for security checking when the get- and set-methods without context parameters are called.
 	 * The get- and set-methods with context parameter should be used when for instance sudo access is necessary (IContext.createSudoClone() can be used to obtain sudo access).
 	 */
-	public static postcodelookup.proxies.Country initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
+	public static loqatepostcodelookup.proxies.Country initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
-		return new postcodelookup.proxies.Country(context, mendixObject);
+		return new loqatepostcodelookup.proxies.Country(context, mendixObject);
 	}
 
-	public static postcodelookup.proxies.Country load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
+	public static loqatepostcodelookup.proxies.Country load(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixIdentifier mendixIdentifier) throws com.mendix.core.CoreException
 	{
 		com.mendix.systemwideinterfaces.core.IMendixObject mendixObject = com.mendix.core.Core.retrieveId(context, mendixIdentifier);
-		return postcodelookup.proxies.Country.initialize(context, mendixObject);
+		return loqatepostcodelookup.proxies.Country.initialize(context, mendixObject);
 	}
 
-	public static java.util.List<postcodelookup.proxies.Country> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
+	public static java.util.List<loqatepostcodelookup.proxies.Country> load(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String xpathConstraint) throws com.mendix.core.CoreException
 	{
-		java.util.List<postcodelookup.proxies.Country> result = new java.util.ArrayList<postcodelookup.proxies.Country>();
-		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//PostcodeLookup.Country" + xpathConstraint))
-			result.add(postcodelookup.proxies.Country.initialize(context, obj));
+		java.util.List<loqatepostcodelookup.proxies.Country> result = new java.util.ArrayList<loqatepostcodelookup.proxies.Country>();
+		for (com.mendix.systemwideinterfaces.core.IMendixObject obj : com.mendix.core.Core.retrieveXPathQuery(context, "//LoqatePostcodeLookup.Country" + xpathConstraint))
+			result.add(loqatepostcodelookup.proxies.Country.initialize(context, obj));
 		return result;
 	}
 
@@ -212,7 +212,7 @@ public class Country
 
 		if (obj != null && getClass().equals(obj.getClass()))
 		{
-			final postcodelookup.proxies.Country that = (postcodelookup.proxies.Country) obj;
+			final loqatepostcodelookup.proxies.Country that = (loqatepostcodelookup.proxies.Country) obj;
 			return getMendixObject().equals(that.getMendixObject());
 		}
 		return false;
@@ -229,7 +229,7 @@ public class Country
 	 */
 	public static java.lang.String getType()
 	{
-		return "PostcodeLookup.Country";
+		return "LoqatePostcodeLookup.Country";
 	}
 
 	/**

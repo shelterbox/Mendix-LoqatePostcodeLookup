@@ -2,7 +2,7 @@
 //
 // WARNING: Code you write here will be lost the next time you deploy the project.
 
-package postcodelookup.proxies.microflows;
+package loqatepostcodelookup.proxies.microflows;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,35 +14,35 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 
 public class Microflows
 {
-	// These are the microflows for the PostcodeLookup module
-	public static postcodelookup.proxies.RetrieveResult aCT_FindResult_Select(IContext context, postcodelookup.proxies.FindResult _selectedFindResult, postcodelookup.proxies.Search _search)
+	// These are the microflows for the LoqatePostcodeLookup module
+	public static loqatepostcodelookup.proxies.RetrieveResult aCT_FindResult_Select(IContext context, loqatepostcodelookup.proxies.FindResult _selectedFindResult, loqatepostcodelookup.proxies.Search _search)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("SelectedFindResult", _selectedFindResult == null ? null : _selectedFindResult.getMendixObject());
 			params.put("Search", _search == null ? null : _search.getMendixObject());
-			IMendixObject result = (IMendixObject)Core.execute(context, "PostcodeLookup.ACT_FindResult_Select", params);
-			return result == null ? null : postcodelookup.proxies.RetrieveResult.initialize(context, result);
+			IMendixObject result = (IMendixObject)Core.execute(context, "LoqatePostcodeLookup.ACT_FindResult_Select", params);
+			return result == null ? null : loqatepostcodelookup.proxies.RetrieveResult.initialize(context, result);
 		}
 		catch (CoreException e)
 		{
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static java.util.List<postcodelookup.proxies.FindResult> aCT_Search(IContext context, postcodelookup.proxies.Search _search)
+	public static java.util.List<loqatepostcodelookup.proxies.FindResult> aCT_Search(IContext context, loqatepostcodelookup.proxies.Search _search)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("Search", _search == null ? null : _search.getMendixObject());
-			java.util.List<IMendixObject> objs = Core.execute(context, "PostcodeLookup.ACT_Search", params);
-			java.util.List<postcodelookup.proxies.FindResult> result = null;
+			java.util.List<IMendixObject> objs = Core.execute(context, "LoqatePostcodeLookup.ACT_Search", params);
+			java.util.List<loqatepostcodelookup.proxies.FindResult> result = null;
 			if (objs != null)
 			{
-				result = new java.util.ArrayList<postcodelookup.proxies.FindResult>();
+				result = new java.util.ArrayList<loqatepostcodelookup.proxies.FindResult>();
 				for (IMendixObject obj : objs)
-					result.add(postcodelookup.proxies.FindResult.initialize(context, obj));
+					result.add(loqatepostcodelookup.proxies.FindResult.initialize(context, obj));
 			}
 			return result;
 		}
@@ -51,44 +51,18 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static postcodelookup.proxies.Search dS_Search_New(IContext context)
+	public static java.util.List<loqatepostcodelookup.proxies.Country> aDMIN_Countries_Import(IContext context)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			IMendixObject result = (IMendixObject)Core.execute(context, "PostcodeLookup.DS_Search_New", params);
-			return result == null ? null : postcodelookup.proxies.Search.initialize(context, result);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
-	}
-	public static postcodelookup.proxies.Search dS_Search_New_GB(IContext context)
-	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			IMendixObject result = (IMendixObject)Core.execute(context, "PostcodeLookup.DS_Search_New_GB", params);
-			return result == null ? null : postcodelookup.proxies.Search.initialize(context, result);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
-	}
-	public static java.util.List<postcodelookup.proxies.Country> sUB_Countries_Import(IContext context)
-	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			java.util.List<IMendixObject> objs = Core.execute(context, "PostcodeLookup.SUB_Countries_Import", params);
-			java.util.List<postcodelookup.proxies.Country> result = null;
+			java.util.List<IMendixObject> objs = Core.execute(context, "LoqatePostcodeLookup.ADMIN_Countries_Import", params);
+			java.util.List<loqatepostcodelookup.proxies.Country> result = null;
 			if (objs != null)
 			{
-				result = new java.util.ArrayList<postcodelookup.proxies.Country>();
+				result = new java.util.ArrayList<loqatepostcodelookup.proxies.Country>();
 				for (IMendixObject obj : objs)
-					result.add(postcodelookup.proxies.Country.initialize(context, obj));
+					result.add(loqatepostcodelookup.proxies.Country.initialize(context, obj));
 			}
 			return result;
 		}
@@ -97,19 +71,35 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static java.util.List<postcodelookup.proxies.FindResult> sUB_FindResult_Get(IContext context, postcodelookup.proxies.Search _search)
+	public static loqatepostcodelookup.proxies.Search dS_Search_New(IContext context)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			IMendixObject result = (IMendixObject)Core.execute(context, "LoqatePostcodeLookup.DS_Search_New", params);
+			return result == null ? null : loqatepostcodelookup.proxies.Search.initialize(context, result);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static java.util.List<loqatepostcodelookup.proxies.FindResult> sUB_FindResult_Get(IContext context, java.lang.String _searchText, java.lang.String _optionalSearchContainer, java.lang.String _optionalSearchCountryISO2, loqatepostcodelookup.proxies.Search _search)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("SearchText", _searchText);
+			params.put("OptionalSearchContainer", _optionalSearchContainer);
+			params.put("OptionalSearchCountryISO2", _optionalSearchCountryISO2);
 			params.put("Search", _search == null ? null : _search.getMendixObject());
-			java.util.List<IMendixObject> objs = Core.execute(context, "PostcodeLookup.SUB_FindResult_Get", params);
-			java.util.List<postcodelookup.proxies.FindResult> result = null;
+			java.util.List<IMendixObject> objs = Core.execute(context, "LoqatePostcodeLookup.SUB_FindResult_Get", params);
+			java.util.List<loqatepostcodelookup.proxies.FindResult> result = null;
 			if (objs != null)
 			{
-				result = new java.util.ArrayList<postcodelookup.proxies.FindResult>();
+				result = new java.util.ArrayList<loqatepostcodelookup.proxies.FindResult>();
 				for (IMendixObject obj : objs)
-					result.add(postcodelookup.proxies.FindResult.initialize(context, obj));
+					result.add(loqatepostcodelookup.proxies.FindResult.initialize(context, obj));
 			}
 			return result;
 		}
@@ -118,33 +108,36 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static void sUB_FindResult_Search_Clear(IContext context, postcodelookup.proxies.Search _search)
+	public static void sUB_FindResult_Search_Clear(IContext context, loqatepostcodelookup.proxies.Search _search)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("Search", _search == null ? null : _search.getMendixObject());
-			Core.execute(context, "PostcodeLookup.SUB_FindResult_Search_Clear", params);
+			Core.execute(context, "LoqatePostcodeLookup.SUB_FindResult_Search_Clear", params);
 		}
 		catch (CoreException e)
 		{
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static java.util.List<postcodelookup.proxies.FindResult> sUB_Loqate_Find(IContext context, postcodelookup.proxies.Search _search, java.lang.Long _limit)
+	public static java.util.List<loqatepostcodelookup.proxies.FindResult> sUB_Loqate_Find(IContext context, java.lang.Long _limit, loqatepostcodelookup.proxies.Search _search, java.lang.String _searchText, java.lang.String _optionalSearchContainer, java.lang.String _optionalSearchCountryISO2)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			params.put("Search", _search == null ? null : _search.getMendixObject());
 			params.put("Limit", _limit);
-			java.util.List<IMendixObject> objs = Core.execute(context, "PostcodeLookup.SUB_Loqate_Find", params);
-			java.util.List<postcodelookup.proxies.FindResult> result = null;
+			params.put("Search", _search == null ? null : _search.getMendixObject());
+			params.put("SearchText", _searchText);
+			params.put("OptionalSearchContainer", _optionalSearchContainer);
+			params.put("OptionalSearchCountryISO2", _optionalSearchCountryISO2);
+			java.util.List<IMendixObject> objs = Core.execute(context, "LoqatePostcodeLookup.SUB_Loqate_Find", params);
+			java.util.List<loqatepostcodelookup.proxies.FindResult> result = null;
 			if (objs != null)
 			{
-				result = new java.util.ArrayList<postcodelookup.proxies.FindResult>();
+				result = new java.util.ArrayList<loqatepostcodelookup.proxies.FindResult>();
 				for (IMendixObject obj : objs)
-					result.add(postcodelookup.proxies.FindResult.initialize(context, obj));
+					result.add(loqatepostcodelookup.proxies.FindResult.initialize(context, obj));
 			}
 			return result;
 		}
@@ -153,41 +146,41 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static postcodelookup.proxies.RetrieveResult sUB_Loqate_Retrieve(IContext context, postcodelookup.proxies.FindResult _findResult)
+	public static loqatepostcodelookup.proxies.RetrieveResult sUB_Loqate_Retrieve(IContext context, loqatepostcodelookup.proxies.FindResult _findResult)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("FindResult", _findResult == null ? null : _findResult.getMendixObject());
-			IMendixObject result = (IMendixObject)Core.execute(context, "PostcodeLookup.SUB_Loqate_Retrieve", params);
-			return result == null ? null : postcodelookup.proxies.RetrieveResult.initialize(context, result);
+			IMendixObject result = (IMendixObject)Core.execute(context, "LoqatePostcodeLookup.SUB_Loqate_Retrieve", params);
+			return result == null ? null : loqatepostcodelookup.proxies.RetrieveResult.initialize(context, result);
 		}
 		catch (CoreException e)
 		{
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static postcodelookup.proxies.RetrieveResult sUB_RetrieveResult_Get(IContext context, postcodelookup.proxies.FindResult _findResult)
+	public static loqatepostcodelookup.proxies.RetrieveResult sUB_RetrieveResult_Get(IContext context, loqatepostcodelookup.proxies.FindResult _findResult)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("FindResult", _findResult == null ? null : _findResult.getMendixObject());
-			IMendixObject result = (IMendixObject)Core.execute(context, "PostcodeLookup.SUB_RetrieveResult_Get", params);
-			return result == null ? null : postcodelookup.proxies.RetrieveResult.initialize(context, result);
+			IMendixObject result = (IMendixObject)Core.execute(context, "LoqatePostcodeLookup.SUB_RetrieveResult_Get", params);
+			return result == null ? null : loqatepostcodelookup.proxies.RetrieveResult.initialize(context, result);
 		}
 		catch (CoreException e)
 		{
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static void sUB_Search_Clear(IContext context, postcodelookup.proxies.Search _search)
+	public static void sUB_Search_Clear(IContext context, loqatepostcodelookup.proxies.Search _search)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("Search", _search == null ? null : _search.getMendixObject());
-			Core.execute(context, "PostcodeLookup.SUB_Search_Clear", params);
+			Core.execute(context, "LoqatePostcodeLookup.SUB_Search_Clear", params);
 		}
 		catch (CoreException e)
 		{
